@@ -22,7 +22,7 @@
         $username = $_POST["username"];
 
         $database = new mysqli($host, $user, $password, $db, $port);
-        $query = 'INSERT INTO users VALUES("'.$email.'", "'.$username.'","'.$pass.'")';
+        $query = 'INSERT INTO users (email, username, pass) VALUES("'.$email.'", "'.$username.'","'.$pass.'")';
         try{
             $result = $database->query($query);
             print("Usuario creado correctamente");
